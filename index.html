@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">    
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <!-- Bibliothèque D3js -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <title>KOREAVIZ</title>
+</head>
+
+    
+<body>
+      <!--  <div id="loader-wrapper">
+        <div class="loader">
+          <svg viewBox="0 0 80 80">
+            <circle r="32" cy="40" cx="40" id="test"></circle>
+          </svg>
+        </div>
+        <div class="loader triangle">
+          <svg viewBox="0 0 86 80">
+            <polygon points="43 8 79 72 7 72"></polygon>
+          </svg>
+        </div>
+        <div class="loader">
+          <svg viewBox="0 0 80 80">
+            <rect height="64" width="64" y="8" x="8"></rect>
+          </svg>
+        </div>
+      </div>
+      <div id="content" style="display: none;"> -->
+        <header class="scroll" id="title">
+            <div class="logo-container">
+                <a href="#title" class="logo">
+                    <img src="Group 9.png" width="50" height="50" alt="Accueil">
+                </a>
+            </div>
+        
+            <div class="side-image right">
+                <img src="droite.png" alt="Image droite">
+            </div>
+            <div class="text-container">
+                <h1 class="white"><span class="yellow">Korea</span>Viz</h1>
+                <h2 class="yellow">한국 관광</h2>
+                <h2 class="white">Tourism in South Korea</h2>
+                <div class="start"><a href="#about">Explore now</a></div>
+            </div>
+            <div class="side-image left">
+                <img src="gauche.png" alt="Image gauche">
+            </div>
+        </header>
+         <br>
+        <br>
+        <section class="scroll bg-brown" id="about">
+            <h3 class="yellow" data-aos="fade-in">Corée du Sud, <br>une Ascension Fulgurante</h3>
+            <div class="container">
+                <div class="text-containers" data-aos="fade-in">
+                    <p>South Korea has become a popular destination thanks to the global popularity of its culture, particularly through K-pop, K-dramas and Korean cinema. Groups like BTS and shows like Squid Game have captivated millions of fans, sparking growing interest in the country and its customs.</p>
+                    <p>Korean cuisine, with dishes like bibimbap and kimchi, also attracts visitors. They come to taste these local specialties in traditional markets and restaurants, discovering a rich and diverse culinary culture.</p>
+                    <p>South Korea seduces with its landscapes and historical sites. From the ancient palaces of Seoul to the mountains of Seoraksan and the beaches of Jeju Island, the country offers a variety of natural and cultural experiences that combine tradition and modernity.</p>   
+                </div>
+                <div class="image-container" data-aos="fade-left">
+                    <img src="Group 12.png" alt="">
+                </div>
+            </div>
+        </section> 
+        
+        <section class="scroll" id="tourism-graph">
+            <h3 class="yellow">Évolution du Tourisme en Corée du Sud 1975-2023</h3>
+            <p>Cette représentation de données consiste en l'évolution du nombre de touristes venant en coree du sud</p>
+            <svg width="1220" height="500"></svg>
+            <div id="tooltip"></div>
+        </section>
+
+        <section class="scroll" id="map-section">
+            <h3>Carte Interactive de <br> la Corée du Sud</h3>
+            <div id="tip"></div>
+            <div id="map-container"></div>
+        </section>
+        <section class="scroll bg-brown" id="about">
+            <h3 class="yellow">Corée du Sud, <br>une Ascension Fulgurante</h3>
+            <div class="container">
+                <div class="text-container">
+                    <p>South Korea has become a popular destination thanks to the global popularity of its culture, particularly through K-pop, K-dramas and Korean cinema. Groups like BTS and shows like Squid Game have captivated millions of fans, sparking growing interest in the country and its customs.</p>
+                    <p>Korean cuisine, with dishes like bibimbap and kimchi, also attracts visitors. They come to taste these local specialties in traditional markets and restaurants, discovering a rich and diverse culinary culture.</p>
+                    <p>South Korea seduces with its landscapes and historical sites. From the ancient palaces of Seoul to the mountains of Seoraksan and the beaches of Jeju Island, the country offers a variety of natural and cultural experiences that combine tradition and modernity.</p>   
+                </div>
+                <div class="image-container">
+                    <img src="Group 12.png" alt="">
+                </div>
+            </div>
+        </section> 
+        <section class="scroll bg-white" id="about">
+            <h3 class="yellow">Corée du Sud, <br>une Ascension Fulgurante</h3>
+            <div class="container">
+                <div class="text-container">
+                    <p>South Korea has become a popular destination thanks to the global popularity of its culture, particularly through K-pop, K-dramas and Korean cinema. Groups like BTS and shows like Squid Game have captivated millions of fans, sparking growing interest in the country and its customs.</p>
+                    <p>Korean cuisine, with dishes like bibimbap and kimchi, also attracts visitors. They come to taste these local specialties in traditional markets and restaurants, discovering a rich and diverse culinary culture.</p>
+                    <p>South Korea seduces with its landscapes and historical sites. From the ancient palaces of Seoul to the mountains of Seoraksan and the beaches of Jeju Island, the country offers a variety of natural and cultural experiences that combine tradition and modernity.</p>   
+                </div>
+                <div class="image-container">
+                    <img src="Group 12.png" alt="">
+                </div>
+            </div>
+        </section> 
+        <footer class="yellow">
+        <h3>Mentions légales</h3>
+        <p>©2024 Tous droits réservés par KoreaViz.</p>
+        <p>Haut de Page</p>
+        </footer>
+       </div>
+        <script src="script.js"></script>
+        <script src="scriptmap.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+</body>
+</html>
