@@ -68,7 +68,7 @@ h1 {
     font-family: "Montserrat Alternates", sans-serif;
     font-weight: 600;
     font-style: normal;
-    font-size: 7rem;
+    font-size: 6rem;
 }
 
 h2 {
@@ -560,10 +560,69 @@ margin-top: 150px;
     }
   }
   
+  /* ----------------------------------------------- mentions légales ----------------------------------------------- */
+ .mentionsLegales {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    gap: 1rem;
+    font-family: "Raleway", sans-serif;
+  }
+  
+.mentionsLegales h2 {
+    margin-top: 10px;
+    color: rgb(0, 0, 0);
+    font-family: "Raleway", sans-serif;
+  
+}
+  
+.catMention {
+    width: 80%;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: column;
+    gap: 0.5rem;
+    color: rgb(0, 0, 0);
+    font-family: "Raleway", sans-serif;
+}
 
+.fleche a {
+text-decoration: none;
+color: black;
+font-size: 1.3rem;
+font-weight: bold;
+background-color:rgba(75, 17, 17, 0.226) ;
+}
 
-/* FOOTER */
+.fleche a:hover{
+    text-decoration: underline;
+}
+
+/* ----------------------------------------------------------- footer ---------------------------------------------------- */
 footer {
-height: 20vh;
-width: 30vw;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    background-color: rgb(71 17 17);
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+}
+
+footer p {
+    color: white;
+    font-family: "Satoshi", sans-serif;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+.container-mentions {
+  background-color: #FFBC40;
 }
