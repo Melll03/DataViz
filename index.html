@@ -3,120 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">    
-    <!-- font -->
+    <title>KoreaViz</title>
+    <!-- FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Bibliothèque JS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
     <!-- AOS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
-    <!-- Bibliothèque D3js -->
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-    <title>KOREAVIZ</title>
+    <!-- Style.css -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/icon.png"> 
 </head>
-
-    
 <body>
-      <!--  <div id="loader-wrapper">
-        <div class="loader">
-          <svg viewBox="0 0 80 80">
-            <circle r="32" cy="40" cx="40" id="test"></circle>
-          </svg>
+    <header class="scroll" id="title">
+        <div class="logo-container">
+            <a href="#title" class="logo">
+                <img src="img/icon.png" width="50" height="50" alt="Accueil">
+            </a>
         </div>
-        <div class="loader triangle">
-          <svg viewBox="0 0 86 80">
-            <polygon points="43 8 79 72 7 72"></polygon>
-          </svg>
+        <div class="text-container">
+            <h1 class="white"><span class="yellow">Korea</span>Viz</h1>
+            <h2 class="yellow">한국 관광</h2>
+            <h2 class="white">Tourism in South Korea</h2>
+            <div class="start"><a href="#about-project">Explore now</a></div>
         </div>
-        <div class="loader">
-          <svg viewBox="0 0 80 80">
-            <rect height="64" width="64" y="8" x="8"></rect>
-          </svg>
+        <div class="side-image left">
+            <img src="img/img-header.png" alt="Image gauche">
         </div>
-      </div>
-      <div id="content" style="display: none;"> -->
-        <header class="scroll" id="title">
-            <div class="logo-container">
-                <a href="#title" class="logo">
-                    <img src="img/Group 9.png" width="50" height="50" alt="Accueil">
-                </a>
-            </div>
-        
-            <div class="side-image right">
-                <img src="img/droite.png" alt="Image droite">
-            </div>
-            <div class="text-container">
-                <h1 class="white"><span class="yellow">Korea</span>Viz</h1>
-                <h2 class="yellow">한국 관광</h2>
-                <h2 class="white">Tourism in South Korea</h2>
-                <div class="start"><a href="#about">Explore now</a></div>
-            </div>
-            <div class="side-image left">
-                <img src="img/gauche.png" alt="Image gauche">
-            </div>
-        </header>
-         <br>
-        <br>
-        <section class="scroll bg-brown" id="about">
-            <h3 class="yellow" data-aos="fade-in">Corée du Sud, <br>une Ascension Fulgurante</h3>
-            <div class="container">
-                <div class="text-containers" data-aos="fade-in">
-                    <p>South Korea has become a popular destination thanks to the global popularity of its culture, particularly through K-pop, K-dramas and Korean cinema. Groups like BTS and shows like Squid Game have captivated millions of fans, sparking growing interest in the country and its customs.</p>
-                    <p>Korean cuisine, with dishes like bibimbap and kimchi, also attracts visitors. They come to taste these local specialties in traditional markets and restaurants, discovering a rich and diverse culinary culture.</p>
-                    <p>South Korea seduces with its landscapes and historical sites. From the ancient palaces of Seoul to the mountains of Seoraksan and the beaches of Jeju Island, the country offers a variety of natural and cultural experiences that combine tradition and modernity.</p>   
-                </div>
-                <div class="image-container" data-aos="fade-left">
-                    <img src="img/Group 12.png" alt="">
-                </div>
-            </div>
-        </section> 
-        
-        <section class="scroll" id="tourism-graph">
-            <h3 class="yellow">Évolution du Tourisme en Corée du Sud 1975-2023</h3>
-            <p>Cette représentation de données consiste en l'évolution du nombre de touristes venant en coree du sud</p>
-            <svg width="1220" height="500"></svg>
-            <div id="tooltip"></div>
-        </section>
+    </header>
 
-        <section class="scroll" id="map-section">
-            <h3>Carte Interactive de <br> la Corée du Sud</h3>
-            <div id="tip"></div>
-            <div id="map-container"></div>
-        </section>
-        <section class="scroll bg-brown" id="about">
-            <h3 class="yellow">Corée du Sud, <br>une Ascension Fulgurante</h3>
-            <div class="container">
-                <div class="text-container">
-                    <p>South Korea has become a popular destination thanks to the global popularity of its culture, particularly through K-pop, K-dramas and Korean cinema. Groups like BTS and shows like Squid Game have captivated millions of fans, sparking growing interest in the country and its customs.</p>
-                    <p>Korean cuisine, with dishes like bibimbap and kimchi, also attracts visitors. They come to taste these local specialties in traditional markets and restaurants, discovering a rich and diverse culinary culture.</p>
-                    <p>South Korea seduces with its landscapes and historical sites. From the ancient palaces of Seoul to the mountains of Seoraksan and the beaches of Jeju Island, the country offers a variety of natural and cultural experiences that combine tradition and modernity.</p>   
-                </div>
-                <div class="image-container">
-                    <img src="img/Group 12.png" alt="">
-                </div>
+    <section class="about-project" id="about-project">
+        <div class="project-content">
+            <h2>Dataviz MMI, projet étudiants</h2>
+            <p>
+                Ce site est un projet scolaire réalisé dans le cadre de la SAE 3.03 ayant pour objectif de développer un site web traitant des données pour en faire une datavisualisation. Ce projet a été réalisé par trois étudiantes de deuxième année de BUT MMI à Champs-sur-Marne et qui sont : Mélissa CUMUR, Emilie GUERRIER et Sophie MUKENGESHAYI.
+                Nous sommes donc parti sur le sujet traitant de l’évolution du tourisme en Corée du Sud au fil des années de 1975 à 2023.
+            </p>
+        </div>
+        <div class="project-image" data-aos="fade-left">
+            <img src="img/img-about.png" alt="">
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <div class="content-wrapper">
+                <h2 class="yellow">Corée du Sud, une ascension fulgurante</h2>
+                <p>La Corée du Sud a connu des années très difficiles après la guerre entre les deux Corées dans les années 50. La Corée du Sud a réussi à se relever grâce à la force de son peuple et à une volonté collective de reconstruction.</p>
+                <p>Ce pays est devenu une destination populaire grâce à la popularité mondiale de sa culture, notamment à travers la K-pop, les K-dramas et le cinéma coréen.</p>
+                <p>Le pays est également un acteur majeur dans les technologies, la science et l'innovation. En sortant de l'ombre de la guerre et des difficultés passées, la Corée du Sud est parvenue à s'imposer comme une nation dynamique et influente, prête à affronter les défis de demain.</p>
             </div>
-        </section> 
-        <section class="scroll bg-white" id="about">
-            <h3 class="yellow">Corée du Sud, <br>une Ascension Fulgurante</h3>
-            <div class="container">
-                <div class="text-container">
-                    <p>South Korea has become a popular destination thanks to the global popularity of its culture, particularly through K-pop, K-dramas and Korean cinema. Groups like BTS and shows like Squid Game have captivated millions of fans, sparking growing interest in the country and its customs.</p>
-                    <p>Korean cuisine, with dishes like bibimbap and kimchi, also attracts visitors. They come to taste these local specialties in traditional markets and restaurants, discovering a rich and diverse culinary culture.</p>
-                    <p>South Korea seduces with its landscapes and historical sites. From the ancient palaces of Seoul to the mountains of Seoraksan and the beaches of Jeju Island, the country offers a variety of natural and cultural experiences that combine tradition and modernity.</p>   
-                </div>
-                <div class="image-container">
-                    <img src="img/Group 12.png" alt="">
-                </div>
+            <div class="image-container">
+                <img src="img/img-about2.png" alt="Image Corée du Sud">
             </div>
-        </section> 
-        <footer class="yellow">
-        <h3>Mentions légales</h3>
-        <p>©2024 Tous droits réservés par KoreaViz.</p>
-        <p>Haut de Page</p>
-        </footer>
-       </div>
-        <script src="script.js"></script>
-        <script src="scriptmap.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+        </div>
+    </section>
+    
+    
+
+    <section class="scroll" id="tourism-graph">
+        <h3 class="yellow">Évolution du tourisme en Corée du Sud 1975-2023</h3>
+        <p>Cette représentation de données consiste en l'évolution du nombre de touristes venant en Corée du Sud</p>
+        <svg width="1220" height="500"></svg>
+        <div id="tooltip"></div>
+    </section>
+
+    <section id="k-culture">
+        <div class="container-kculture">
+            <div class="image-kculture">
+                <img src="img/kculture.png" alt="">
+            </div>
+            <div class="content-kculture">
+                <h2>La K-Culture</h2>
+                <p>
+                    Phénomène regroupant la culture populaire sud-coréenne, la K-culture porte une influence mondiale,
+                    touchant à tous les domaines : musique, séries, cinéma, beauté, gastronomie, mode…
+                </p>
+                <p>
+                    Le succès des webtoons et des jeux vidéo coréens, tout comme l’attrait pour la langue et les traditions
+                    coréennes, témoignent de la puissance de cette "vague coréenne", appelée aussi "Hallyu" qui séduit
+                    toutes les générations.
+                </p>
+                <p>
+                    En France, en 2023, plus de 16% de la population s’intéressent à la K-pop (Ipsos.fr), les ventes de
+                    consommations des produits de cosmétiques coréens ont augmenté de 30%, en 2022 (The NPD Group.fr) ainsi
+                    de 25% concernant les produits alimentaires, sur la même période (NielsenIQ.fr).
+                </p>
+                <p class="source">source : subdesign.fr</p>
+            </div>
+        </div>
+    </section>
+    
+    <div class="header-content">
+        <h2>Répartition des étudiants par nationalité</h2>
+        <p class="explanatory-text">
+            Les données ci-dessous présentent la répartition des étudiants internationaux en Corée du Sud, 
+            en se concentrant sur les trois nationalités les plus représentées : <strong>Chine</strong>, 
+            <strong>Japon</strong>, et <strong>Taïwan</strong>. Ces pays constituent les principales sources 
+            d'étudiants étrangers dans les universités sud-coréennes, en raison de leur proximité géographique 
+            et des liens culturels et éducatifs forts avec la Corée du Sud. Les graphiques et le tableau illustrent 
+            les variations mensuelles entre 2019 et 2020, mettant en lumière les tendances migratoires et l'impact 
+            des événements mondiaux.
+        </p>
+    </div>
+
+
+    <div class="month-selector">
+        <label for="monthSelect">Choisissez un mois : </label>
+        <select id="monthSelect" onchange="updateChart(this.value)">
+            <option value="Janvier">Janvier</option>
+            <option value="Février">Février</option>
+            <option value="Mars">Mars</option>
+            <option value="Avril">Avril</option>
+        </select>
+    </div>
+
+    <div class="charts-container">
+        <div>
+            <h3>En 2019</h3>
+            <canvas id="pieChart2019"></canvas>
+        </div>
+        <div>
+            <h3>En 2020</h3>
+            <canvas id="pieChart2020"></canvas>
+        </div>
+    </div>
+
+    <!-- Tableau de données -->
+    <div class="table-container">
+        <h3>Tableau des étudiants par nationalité</h3>
+    </div>
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th>Mois</th>
+                <th>Chine (2019)</th>
+                <th>Japon (2019)</th>
+                <th>Taïwan (2019)</th>
+                <th>Chine (2020)</th>
+                <th>Japon (2020)</th>
+                <th>Taïwan (2020)</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+
+    <section class="scroll" id="map-section">
+        <h2>Carte interactive de la Corée du sud</h2>
+        <div id="tip"></div>
+        <div id="map-container"></div>
+       <p>La Corée du Sud regorge de villes et de paysages uniques, mais certaines se distinguent comme des incontournables pour une expérience culturelle et touristique complète. </p>
+
+        <p>En première position, Séoul, la capitale, est la plus grande ville du pays et l’une des métropoles les plus dynamiques d’Asie. Avec plus de 2 000 ans d’histoire, elle attire environ 12 millions de visiteurs internationaux par an, ce qui en fait la ville la plus visitée de Corée du Sud. </p>
+        
+        <p>En deuxième position, Busan se démarque par ses plages, ses temples et son ambiance balnéaire. Située sur la côte sud, elle accueille 4,3 millions de touristes chaque année et constitue une alternative plus décontractée à Séoul tout en offrant l’énergie d’une grande ville. </p>
+        
+        <p>Enfin, Gyeongju, surnommée le "musée sans murs", est une ville au riche patrimoine historique et culturel. Elle attire 1,5 million de visiteurs internationaux par an grâce à ses nombreux sites classés au patrimoine mondial de l’UNESCO.</p>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-image">
+            <img src="img-footer.png" alt="Footer Characters">
+        </div>
+        <div>
+            
+        </div>
+        <div class="footer-links">
+            <a href="mentions.html">Mentions Légales</a>
+            <a href="sources.html">Sources</a>
+            <a href="#top">Haut de page</a>
+        </div>
+        <div class="footer-copyright">
+            ©2024 KOREAVIZ. Tous droits réservés.
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="map.js"></script>
+    <script src="nationalite.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 </body>
 </html>
