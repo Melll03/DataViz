@@ -19,15 +19,23 @@ body {
     scrollbar-width: none;
     padding: 0;
     position: relative;
-    overflow-x: hidden;
-    
+    overflow-x: hidden; 
 }
 
-:root {
-    scrollbar-width: none;
+/* Skip links */
+.evitement {
+    display: inline-block;
+    color: black;
+    background: #FFBC40;
+    padding: .5em;
+    position: absolute;
+    left: -99999rem;
+    z-index: 100;       
 }
 
-/* scrollbar */
+a.evitement:focus {
+    left: 0;
+}
 
 .scroll {
     scroll-snap-align: start;
@@ -39,16 +47,8 @@ body {
     color: white;
 }
 
-.bg-white {
-    background-color: white;
-}
-
 .yellow {
     color: #FFBC40;
-}
-
-.bg-brown {
-background-color: #843C30;
 }
 
 /*text*/
@@ -56,7 +56,6 @@ background-color: #843C30;
 h1,
 h2,
 h3,
-h4,
 p {
     margin: 0;
 }
@@ -84,9 +83,8 @@ h3 {
     font-family: "Montserrat Alternates", sans-serif;
     font-weight: 600;
     font-style: normal;
-    font-size: 2;
+    font-size: 2rem;
 }
-
 
 .logo-container {
     position: absolute; 
@@ -100,7 +98,6 @@ h3 {
     height: 50px;
     object-fit: contain; 
 }
-
 
 /* HEADER */
 header {
@@ -221,7 +218,6 @@ header {
     width: 100%;
     transform: rotate(-5deg); /* Inclinaison de l'image */
 }
-
 
 /* ABOUT*/
 
@@ -351,7 +347,7 @@ svg {
     max-width: 1200px;
     margin: 0 auto;
     gap: 30px;
-    overflow: hidden; /* Évite les débordements */
+    overflow: hidden; 
 }
 
 .image-kculture {
@@ -467,7 +463,6 @@ select {
     margin-bottom: 20px;
 }
 
-
 table {
     width: 80%;
     margin: 20px auto;
@@ -488,16 +483,16 @@ table {
 table, th, td {
     border: 1px solid #000000; 
 }
+
 th, td {
     padding: 8px 12px;
     text-align: center;
 }
+
 th {
     background-color: #FFBC40; 
     color: #000; 
 }
-
-
 
 /* CARTE INTERACTIVE */
 
@@ -507,44 +502,44 @@ th {
     flex: 1;
     }
     
-    #map-section h2 {
-        text-align: start; 
-        width: 100%;
-        font-family: "Montserrat Alternates", sans-serif;
-        font-weight: 600;
-        font-style: normal;
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-        margin-left: 3rem;
-        color: #FFBC40;
-    }
+#map-section h2 {
+    text-align: start; 
+    width: 100%;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    margin-left: 3rem;
+    color: #FFBC40;
+}
     
-    #map-container svg {
-     margin-top:10px;
-     height: auto;
-     width: 45%;  
-     float: right;   
-    }
+#map-container svg {
+    margin-top:10px;
+    height: auto;
+    width: 45%;  
+    float: right;   
+}
     
-    #map-container path {
-        cursor: pointer; 
-        fill: #FFBC40; 
-        transition: fill 0.3s ease;
-    }
+#map-container path {
+    cursor: pointer; 
+    fill: #FFBC40; 
+    transition: fill 0.3s ease;
+}
     
-    #map-container path:hover {
-     fill: #843C30; 
-     cursor: default;
-    }
+#map-container path:hover {
+    fill: #843C30; 
+    cursor: default;
+}
       
 #tip {
-     position: absolute;
-     display: none;
-     background: #fff;
-     border: 2px solid white;
-     color: black;
-     padding: 5px 10px;
-     z-index: 100;
+    position: absolute;
+    display: none;
+    background: #fff;
+    border: 2px solid white;
+    color: black;
+    padding: 5px 10px;
+    z-index: 100;
 }
 
 #map-section p {
@@ -573,7 +568,6 @@ th {
 }
 
 .footer-image {
-
     position: relative;
     top: -5px; 
     margin-bottom: -30px; 
@@ -614,19 +608,16 @@ th {
   color: #471111;
 }
 
-
 /* MENTIONS LEGALES + SOURCES */
 .container-mentions {
     max-width: 1000px;
     margin: 0 auto;
-    padding: 20px;
-    
+    padding: 20px;   
 }
 
 .mentionsLegales {
     background-color:#FFBC40 ;
     padding: 30px;
-
 }
 
 .mention-h1 {
@@ -662,8 +653,6 @@ b {
     display: inline-block;
     margin-top: 20px;
 }
-
-
 
 /* Ajustement responsive pour petites résolutions */
 @media (max-width: 768px) {
