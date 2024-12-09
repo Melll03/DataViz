@@ -159,11 +159,11 @@ header {
 .start a {
     display: inline-block;
     text-decoration: none; 
-    color: white;
+    color: #471111;
 }
 
 .start a:visited {
-    color: white; 
+    color: #471111; 
 }
 
 .start a:hover {
