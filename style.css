@@ -490,6 +490,7 @@ table {
 
 .table-container {
     text-align: center;
+    display: none;
 }
 
 .table-container h3 {
