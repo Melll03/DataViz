@@ -463,6 +463,23 @@ select {
     margin-bottom: 20px;
 }
 
+/* D3 GRAPH button */
+#showTableButton {
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color: #FFBC40;
+    color: #471111;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+#showTableButton:hover {
+    background-color: #843C30;
+}
+
+
+/* D3 GRAPH tableau + camemberts tableau  */
 table {
     width: 80%;
     margin: 20px auto;

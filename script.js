@@ -1,12 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   AOS.init(); //AOS
 
-//Loader
-setTimeout(function () {
-  document.getElementById('loader-wrapper').style.display = 'none';
-  document.getElementById('content').style.display = 'block';
-}, 3000); 
-
 
 // Charger les données depuis le fichier JSON
 d3.json('Datavisitors.json').then(data => {
@@ -126,7 +120,35 @@ d3.json('Datavisitors.json').then(data => {
   });
        
   
-  
+  //Bouton afficher/masquer les données pour le graphique en barres
+
+fetch('Datavisitors.json')
+.then(response => response.json())
+.then(data => {
+    const showTableButton = document.getElementById("showTableButton");
+    const tableContainer = document.getElementById("tableContainer");
+    const tourismTableBody = document.getElementById("tourismTableBody");
+
+    showTableButton.addEventListener("click", () => {
+        // Afficher/Masquer le tableau
+        if (tableContainer.style.display === "none" || tableContainer.style.display === "") {
+            tourismTableBody.innerHTML = ""; 
+            data.forEach(item => {
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                    <td>${item.year}</td>
+                    <td>${item.travellers}</td>
+                `;
+                tourismTableBody.appendChild(row);
+            });
+            tableContainer.style.display = "block"; // Affiche le tableau
+            showTableButton.textContent = "Masquer les données";
+        } else {
+            tableContainer.style.display = "none"; // Masque le tableau
+            showTableButton.textContent = "Afficher les données";
+        }
+    });
+});
   
 });
   

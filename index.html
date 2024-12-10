@@ -78,6 +78,20 @@
         <p>Cette représentation de données consiste en l'évolution du nombre de touristes venant en Corée du Sud</p>
         <svg width="1220" height="500"></svg>
         <div id="tooltip"></div>
+        <button id="showTableButton">Afficher les données</button>
+        <div class="table-container" id="tableContainer">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Année</th>
+                        <th>Nombre de touristes (en millions)</th>
+                    </tr>
+                </thead>
+                <tbody id="tourismTableBody">
+                    <!-- Les données sont insérées ici -->
+                </tbody>
+            </table>
+        </div>
     </section>
 
     <!-- SECTION TEXTE K-CULTURE -->
@@ -136,11 +150,11 @@
     <div class="charts-container">
         <div>
             <h3>En 2019</h3>
-            <canvas id="pieChart2019"></canvas>
+            <canvas id="pieChart2019" aria-label="diagramme circulaire des nationalités en 2019"></canvas>
         </div>
         <div>
             <h3>En 2020</h3>
-            <canvas id="pieChart2020"></canvas>
+            <canvas id="pieChart2020" aria-label="diagramme circulaire des nationalités en 2020"></canvas>
         </div>
     </div>
 
