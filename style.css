@@ -719,6 +719,19 @@ caption {
     margin-bottom: 15px;
 }
 
+.mention-list a {
+    color: #471111;
+    text-decoration: none;
+}
+
+.mention-list a:hover{
+    color: #843C30;
+}
+
+.mention-list {
+    color: #471111;
+}
+
 b {
     font-weight: bold;
     color: #471111;
