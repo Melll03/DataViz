@@ -541,12 +541,9 @@ th {
     
 #map-container path {
     cursor: pointer; 
-    fill: #FFBC40; 
-    transition: fill 0.3s ease;
 }
     
 #map-container path:hover {
-    fill: #843C30; 
     cursor: default;
 }
       
@@ -568,6 +565,10 @@ th {
     margin-top: 30px;
     margin-left: 3rem;
     text-align: start;
+}
+
+#map-section strong {
+    color: #FFBC40;  
 }
 
 /* FOOTER */
