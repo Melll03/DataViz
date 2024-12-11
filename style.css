@@ -689,6 +689,10 @@ b {
     margin-top: 20px;
 }
 
+
+
+/* RESPONSIVE */
+
 /* Ajustement responsive pour petites résolutions */
 @media (max-width: 768px) {
     .container-mentions {
@@ -709,5 +713,28 @@ b {
 
     footer {
         padding: 10px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    #about-project {
+        padding: 40px 20px;
+        flex-direction: column; /* Passage en colonne */
+        align-items: center;
+    }
+
+    .project-content, 
+    .project-image {
+        padding: 0;
+        max-width: 100%;
+    }
+
+    .project-content h2 {
+        font-size: 2.2rem; 
+    }
+
+    .project-image img {
+        max-width: 300px; 
     }
 }
