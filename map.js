@@ -37,6 +37,14 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    function getRegionColor(visitors) {
+        if (visitors > 10000000) return '#76AADA'; // (plus de 10M)
+        else if (visitors > 6000000) return '#CCE5FB'; // (6M - 10M)
+        else if (visitors > 3000000) return '#E697A1'; //  (3M - 6M)
+        else if (visitors > 1000000) return '#B94B61'; // (1M - 3M)
+        else return '#F7E4DA'; //  (< 1M)
+    }
+
     fetch('south-korea.svg') // Charge le fichier SVG
       .then(response => response.text())
       .then(svg => {
