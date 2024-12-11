@@ -79,3 +79,21 @@ document.addEventListener('DOMContentLoaded', function () {
       });
 
     });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const button = document.getElementById('toggleTableButton');
+        const tableContainers = document.getElementById('tableContainers');
+        
+        tableContainers.style.display = 'none';  
+        
+        button.addEventListener('click', function () {
+            if (tableContainers.style.display === 'none') {
+                tableContainers.style.display = 'block'; 
+                button.textContent = 'Masquer les données'; 
+            } else {
+                tableContainers.style.display = 'none'; 
+                button.textContent = 'Afficher les données'; // Réinitialiser le texte du bouton
+            }
+        });
+    });
+    
