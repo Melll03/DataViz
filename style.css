@@ -627,15 +627,15 @@ caption {
 }
 
 .source a {
-    color: #FFBC40;
+    color: white;
     text-decoration: none;
 }
 
 .source a:hover {
-    color: white;
+    color: #FFBC40;
 }
 
-.source a:hover {
+.source a:visited {
     color: #FFBC40;
 }
 
