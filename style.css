@@ -728,7 +728,7 @@ caption {
     color: #843C30;
 }
 
-.mention-list {
+.mention-list a:visited {
     color: #471111;
 }
 
