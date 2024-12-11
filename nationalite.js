@@ -87,7 +87,7 @@ const monthlyData2019 = {
   function updateTable(month) {
     const data2020 = monthlyData2020[month];
     const data2019 = monthlyData2019[month];
-    const tableBody = document.getElementById("dataTable").getElementsByTagName("tbody")[0];
+    const tableBody = document.getElementById("dataTable2").getElementsByTagName("tbody")[0];
     tableBody.innerHTML = "";
   
     const newRow = tableBody.insertRow();
