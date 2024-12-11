@@ -476,6 +476,7 @@ select {
 }
 #showTableButton:hover {
     background-color: #843C30;
+    color: #FFBC40;
 }
 
 
