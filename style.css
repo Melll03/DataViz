@@ -587,6 +587,30 @@ th {
     color: #FFBC40;  
 }
 
+
+#toggleTableButton {
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color: #FFBC40; 
+    color: #471111; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 1rem;
+    
+}
+
+#toggleTableButton:hover {
+    background-color: #843C30; 
+    color: white; 
+}
+
+#tableContainers {
+    text-align: center;
+    display: none; /* Le tableau est masqué par défaut */
+    margin-top: 20px;
+}
+
 /* FOOTER */
 .footer {
     width: 100%; 
