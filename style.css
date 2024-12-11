@@ -720,17 +720,17 @@ caption {
 }
 
 .mention-list a {
-    color: black;
+    color: #952222;
     text-decoration: none;
 }
 
 .mention-list a:hover{
-    color: #843C30;
+    color: #471111;
     text-decoration: underline;
 }
 
 .mention-list a:visited {
-    color: black;
+    color: #952222;
 }
 
 b {
@@ -742,7 +742,7 @@ b {
 .fleche a {
     font-size: 1.2rem;
     color: #471111;
-    text-decoration: none;
+    text-decoration: underline;
     display: inline-block;
     margin-top: 20px;
 }
