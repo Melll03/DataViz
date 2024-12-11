@@ -720,16 +720,17 @@ caption {
 }
 
 .mention-list a {
-    color: #471111;
+    color: black;
     text-decoration: none;
 }
 
 .mention-list a:hover{
     color: #843C30;
+    text-decoration: underline;
 }
 
 .mention-list a:visited {
-    color: #471111;
+    color: black;
 }
 
 b {
