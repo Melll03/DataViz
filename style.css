@@ -611,12 +611,31 @@ th {
     margin-top: 20px;
 }
 
+/* Titre pour tableau */
+caption {
+    color: #FFBC40;
+    font-size: 1rem;  
+    margin-bottom: 10px;
+}
 
-
+/* SOURCES DANS LA PAGE ACCUEIL */
 .source {
     font-size: 1rem;
     margin-top: 20px;
     font-style: italic;
+    color: #FFBC40;
+}
+
+.source a {
+    color: #FFBC40;
+    text-decoration: none;
+}
+
+.source a:hover {
+    color: white;
+}
+
+.source a:hover {
     color: #FFBC40;
 }
 
