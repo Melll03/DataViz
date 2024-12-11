@@ -78,13 +78,16 @@
         <p>Cette représentation de données consiste en l'évolution du nombre de touristes venant en Corée du Sud</p>
         <svg width="1220" height="500"></svg>
         <div id="tooltip"></div>
+        <p class="source">Source des données : <a href="https://datalab.visitkorea.or.kr/site/portal/ex/bbs/View.do?cbIdx=1127&bcIdx=300119&pageIndex=1&tgtTypeCd=&searchKey=&searchKey2=&tabFlag=N&subFlag=N&cateCont=spt01">datalab.visitkorea.or.kr</a></p>
+
         <button id="showTableButton">Afficher les données</button>
         <div class="table-container" id="tableContainer">
-            <table>
+            <table id="dataTable1" role="table">
+                <caption>Évolution du tourisme en Corée du Sud 1975-2023</caption>
                 <thead>
                     <tr>
-                        <th>Année</th>
-                        <th>Nombre de touristes (en millions)</th>
+                        <th scope="col">Années</th>
+                        <th scope="col">Nombre de touristes (en millions)</th>
                     </tr>
                 </thead>
                 <tbody id="tourismTableBody">
@@ -158,11 +161,13 @@
         </div>
     </div>
 
+    <p class="source">Source des données : <a href="https://www.kaggle.com/datasets/bappekim/south-korea-visitors">www.kaggle.com</a></p>
+
     <!-- Tableau de données -->
     <div class="table-container">
         <h3>Tableau des étudiants par nationalité</h3>
     </div>
-    <table id="dataTable" role="presentation">
+    <table id="dataTable2" role="table">
         <thead>
             <tr>
                 <th scope="col">Mois</th>
@@ -184,6 +189,8 @@
         <h2>Nombre de visiteurs par région en 2015</h2>
         <div id="tip"></div>
         <div id="map-container"></div>
+        <p class="source">Source des données : <a href="https://en.wikipedia.org/wiki/Tourism_in_South_Korea">en.wikipedia.org</a></p>
+
        <p>Bien que la Corée du Sud regorge de villes et paysages uniques, certaines se distinguent par leur charme et leur richesse culturelle, offrant une expérience inoubliable. Pour l’année 2015, on peut voir sur cette carte que la Corée du Sud a accueilli beaucoup de touristes dans certaines régions du pays. </p>
 
         <p>En première position, nous retrouvons Gyeonggi, caractérisée par son grand nombre d’habitants et proche de la capitale, la ville a reçu environ <strong>15 millions de visiteurs internationaux </strong>, ce qui en fait la ville la plus visitée de la Corée du Sud en 2015. </p>
@@ -195,13 +202,14 @@
         <button id="toggleTableButton">Afficher les données</button>
 
         <div id="tableContainers">
-            <table>
+            <table id="dataTable3" role="table">
+                <caption>Nombre de visiteurs dans différentes régions de la Corée du Sud</caption>
                 <thead>
                     <tr>
-                        <th>Région</th>
-                        <th>Nombre de visiteurs</th>
-                        <th>Couleur</th>
-                        <th>Catégorie</th>
+                        <th scope="col">Région</th>
+                        <th scope="col">Nombre de visiteurs</th>
+                        <th scope="col">Couleur</th>
+                        <th scope="col">Catégorie</th>
                     </tr>
                 </thead>
                 <tbody>
