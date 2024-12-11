@@ -611,6 +611,15 @@ th {
     margin-top: 20px;
 }
 
+
+
+.source {
+    font-size: 1rem;
+    margin-top: 20px;
+    font-style: italic;
+    color: #FFBC40;
+}
+
 /* FOOTER */
 .footer {
     width: 100%; 
