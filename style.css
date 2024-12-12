@@ -548,6 +548,7 @@ th {
 #map-container path:hover {
     transform: scale(1.02); 
     fill: #FFBC40;
+    cursor:default;
 }
       
 #tip {
