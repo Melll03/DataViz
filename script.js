@@ -74,11 +74,21 @@ d3.json('Datavisitors.json').then(data => {
     .attr("y", d => y(d.travellers))
     .attr("height", d => height - y(d.travellers))
     .attr("width", x.bandwidth())
+    .style("fill", "#FFBC40")
+    .style("transform-origin", d => `${x(d.year) + x.bandwidth() / 2}px ${height}px`)
     .on("mouseover", function(event, d) {
-      
-  tooltip.style("opacity", 1)
+      tooltip.style("opacity", 1)
     .html(`<strong>${d.year}</strong>: ${formatNumber(d.travellers)} de touristes`); // Contenu du tooltip
-     d3.select(this).style("fill", "#3C6E70");
+
+     // Agrandir la barre survolée
+     d3.select(this)
+     .style("transform", "scale(1.3)")
+     .style("fill", "#3C6E70")
+     .style("z-index", 10);
+
+      // Assombrir les autres barres
+     chart.selectAll(".bar").filter(e => e !== d)
+     .style("opacity", 0.5);
   })
     .on("mousemove", function(event) {
     tooltip.style("left", (event.pageX + 10) + "px")
@@ -86,7 +96,11 @@ d3.json('Datavisitors.json').then(data => {
   })
     .on("mouseout", function() {
     tooltip.style("opacity", 0);
-    d3.select(this).style("fill", "#FFBC40");
+
+    // Réinitialiser toutes les barres à leur état initial
+    chart.selectAll(".bar")
+    .style("transform", "#FFBC40")
+    .style("oppacity", 1);
   });
     
   // Ajouter les labels des axes x et y
