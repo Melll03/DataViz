@@ -553,11 +553,15 @@ th {
       
 #tip {
     position: absolute;
-    display: none;
-    background: #fff;
-    border: 2px solid white;
-    color: black;
-    padding: 5px 10px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px 20px;
+    border-radius: 8px;
+    pointer-events: none;
+    opacity: 0;
+    font-size: 1rem;
+    color: #ffffff;
+    max-width: 200px;
+    text-align: center;
     z-index: 100;
 }
 
