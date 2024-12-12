@@ -80,6 +80,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     });
 
+    //Bouton afficher/masquer les données
+    
     document.addEventListener('DOMContentLoaded', function () {
         const button = document.getElementById('toggleTableButton');
         const tableContainers = document.getElementById('tableContainers');

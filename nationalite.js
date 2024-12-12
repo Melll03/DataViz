@@ -1,10 +1,13 @@
+//Chart.js
+
+// Données pour l'année 2019 réparties par mois (Chine, Japon, Taïwan)
 const monthlyData2019 = {
     Janvier: [8793, 785, 180],
     Février: [38731, 2084, 908],
     Mars: [32532, 1231, 460],
     Avril: [9959, 333, 147],
   };
-  
+// Données pour l'année 2020 réparties par mois (Chine, Japon, Taïwan)
   const monthlyData2020 = {
     Janvier: [10433, 1035, 285],
     Février: [20753, 1536, 393],
@@ -20,7 +23,7 @@ const monthlyData2019 = {
   
   let pieChartInstance2020 = null;
   let pieChartInstance2019 = null;
-  
+  // Fonction pour mettre à jour les graphiques en fonction du mois sélectionné
   function updateChart(month) {
     const data2020 = monthlyData2020[month];
     const data2019 = monthlyData2019[month];
@@ -94,8 +97,8 @@ const monthlyData2019 = {
     const nationalities = ["Chine", "Japon", "Taïwan"];
   
     newRow.insertCell(0).textContent = month;
-    data2019.forEach(data => newRow.insertCell().textContent = data);
-    data2020.forEach(data => newRow.insertCell().textContent = data);
+    data2019.forEach(data => newRow.insertCell().textContent = data); // Données pour 2019
+    data2020.forEach(data => newRow.insertCell().textContent = data); // Données pour 2020
   }
   
   window.onload = function() {
