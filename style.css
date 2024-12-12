@@ -300,14 +300,15 @@ svg {
   
   #tooltip {
     position: absolute;
-    background: #fff;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px 20px;
+    border-radius: 8px;
     pointer-events: none;
     opacity: 0;
-    font-size: 12px;
-    color: #333;
+    font-size: 1rem;
+    color: #ffffff;
+    max-width: 200px;
+    text-align: center;
   }
 
 #tourism-graph {
