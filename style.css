@@ -540,11 +540,14 @@ th {
 }
     
 #map-container path {
-    cursor: pointer; 
+    cursor: pointer;  
+    transition: fill 0.3s ease, transform 0.3s ease; 
+    transform-origin: center; 
 }
-    
+
 #map-container path:hover {
-    cursor: default;
+    transform: scale(1.02); 
+    fill: #FFBC40;
 }
       
 #tip {
