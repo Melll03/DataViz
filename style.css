@@ -37,10 +37,6 @@ a.evitement:focus {
     left: 0;
 }
 
-.scroll {
-    scroll-snap-align: start;
-}
-
 /* colors */
 
 .white{
@@ -284,8 +280,7 @@ header {
     object-fit: contain;
 }
 
-
-/* BARRES GRAPH */
+/* SECTION BARRES GRAPH */
 
 svg {
     font-family: "Raleway", sans-serif;
@@ -345,9 +340,7 @@ svg {
     padding-right: 2rem;
 }
 
-
-
-/*K-CULTURE */
+/* SECTION K-CULTURE */
 
 #k-culture {
     color: white;
@@ -394,7 +387,7 @@ svg {
     margin-bottom: 20px;
 }
 
-/* CAMEMBERT GRAPH */
+/* SECTION CAMEMBERT GRAPH */
 
 .header-content {
     text-align: left;
@@ -408,7 +401,6 @@ svg {
     padding: 40px 10px;
     color: white;
     font-family: "Raleway", sans-serif;
-   
 }
 
 .header-content h2 {
@@ -423,7 +415,6 @@ svg {
     line-height: 1.5;
     margin-bottom: 10px;
     max-width: 800px;
-
 }
 
 .explanatory-text strong {
@@ -520,7 +511,7 @@ th {
     color: #000; 
 }
 
-/* CARTE INTERACTIVE */
+/* SECTION CARTE INTERACTIVE */
 
 #map-section {
     margin-top: 40px; 
@@ -579,7 +570,6 @@ th {
     color: #FFBC40;  
 }
 
-
 #toggleTableButton {
     margin: 20px 0;
     padding: 10px 20px;
@@ -588,8 +578,7 @@ th {
     border: none; 
     border-radius: 5px; 
     cursor: pointer; 
-    font-size: 1rem;
-    
+    font-size: 1rem;   
 }
 
 #toggleTableButton:hover {
@@ -746,7 +735,6 @@ b {
     display: inline-block;
     margin-top: 20px;
 }
-
 
 
 /* RESPONSIVE */
